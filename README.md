@@ -1,0 +1,86 @@
+# 👻 GhostPass - Secure Password Leak Checker
+
+![Python](https://img.shields.io/badge/Python-3.7+-blue?logo=python)
+![License](https://img.shields.io/badge/License-MIT-green)
+![HIBP](https://img.shields.io/badge/Powered%20by-Have%20I%20Been%20Pwned-red)
+
+A command-line tool that checks if your passwords have been exposed in data breaches — **without ever sending your password over the internet**.
+
+Uses the [Have I Been Pwned](https://haveibeenpwned.com/) **k-Anonymity API**. Only the first 5 characters of the SHA-1 hash are sent. Your full password **stays on your machine**.
+
+## Features
+
+- Animated ghost intro with leak effects
+- Color-coded breach results (red = leaked, green = safe)
+- Hidden password input (never shown on screen)
+- Batch check passwords from a file
+- Scan progress with hacking-style output
+- Works on Linux, macOS, and Windows
+
+## Installation
+
+```bash
+git clone https://github.com/ghayth-1I/GhostPass.git
+cd GhostPass
+python3 -m venv venv
+source venv/bin/activate
+pip install .
+```
+
+## Usage
+
+### Interactive Mode
+```bash
+ghostpass
+```
+
+### Check passwords from a file
+```bash
+ghostpass -f passwords.txt
+```
+
+### Help
+```bash
+ghostpass --help
+```
+
+## Demo
+
+```
+  [GHOSTPASS] > Enter password: ********
+
+  [*] Hashing with SHA-1...
+  [*] Querying HIBP (k-Anonymity)...
+  [*] Comparing locally...
+
+  +====================================================+
+  |            !! PASSWORD BREACHED !!                  |
+  +====================================================+
+  |  Target  : Your password
+  |  Leaked  : 3,355,328 time(s)
+  |  Status  : CRITICAL - CHANGE IMMEDIATELY
+  +====================================================+
+```
+
+## Security
+
+| Concern | How GhostPass handles it |
+|---|---|
+| Password transmission | Only 5 chars of SHA-1 hash sent |
+| Screen display | Passwords are NEVER shown |
+| Storage | Nothing is logged or saved |
+| Local comparison | All matching done on YOUR machine |
+
+## Requirements
+
+- Python 3.7+
+- requests
+- colorama
+
+## License
+
+MIT License - see [LICENSE](LICENSE) for details.
+
+## Author
+
+Made by [@ghayth-1I](https://github.com/ghayth-1I)
