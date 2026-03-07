@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name="ghostpass",
+    name="ghostpass-tool",
     version="1.0.0",
     packages=find_packages(),
     install_requires=[
@@ -10,7 +10,7 @@ setup(
     ],
     entry_points={
         "console_scripts": [
-            "ghostpass=ghostpass_core.cli:main",
+            "ghostpass=ghostpass.cli:main",
         ],
     },
 )
