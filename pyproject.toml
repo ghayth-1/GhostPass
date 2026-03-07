@@ -13,7 +13,7 @@ dependencies = [
 ]
 
 [project.scripts]
-ghostpass = "ghostpass.cli:main"
+ghostpass = "ghostpass_core.cli:main"
 
 [tool.setuptools.packages.find]
-include = ["ghostpass*"]
+include = ["ghostpass_core*"]
