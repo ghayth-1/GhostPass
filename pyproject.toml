@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.backends._legacy:_Backend"
+
+[project]
+name = "ghostpass"
+version = "1.0.0"
+description = "Secure Password Leak Checker"
+requires-python = ">=3.7"
+dependencies = [
+    "requests>=2.28.0",
+    "colorama>=0.4.6",
+]
+
+[project.scripts]
+ghostpass = "ghostpass.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["ghostpass*"]
