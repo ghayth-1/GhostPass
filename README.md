@@ -20,28 +20,41 @@ Uses the [Have I Been Pwned](https://haveibeenpwned.com/) **k-Anonymity API**. O
 ## Installation
 
 ```bash
+# Step 1: Clone the repo
 git clone https://github.com/ghayth-1/GhostPass.git
+
+# Step 2: Enter the folder
 cd GhostPass
+
+# Step 3: Create virtual environment
 python3 -m venv venv
+
+# Step 4: Activate it
 source venv/bin/activate
-pip install .
+
+# Step 5: Install (IMPORTANT: use this exact command)
+pip install --target=./venv/lib/python3.*/site-packages -e .
+
+# Step 6: Run it
+python -m ghostpass
+```
+
+### Quick Install (copy-paste all at once)
+
+```bash
+git clone https://github.com/ghayth-1/GhostPass.git && cd GhostPass && python3 -m venv venv && source venv/bin/activate && pip install requests colorama && python -m ghostpass
 ```
 
 ## Usage
 
 ### Interactive Mode
 ```bash
-ghostpass
+python -m ghostpass
 ```
 
 ### Check passwords from a file
 ```bash
-ghostpass -f passwords.txt
-```
-
-### Help
-```bash
-ghostpass --help
+python -m ghostpass -f passwords.txt
 ```
 
 ## Demo
