@@ -20,7 +20,7 @@ Uses the [Have I Been Pwned](https://haveibeenpwned.com/) **k-Anonymity API**. O
 ## Installation
 
 ```bash
-git clone https://github.com/ghayth-1I/GhostPass.git
+git clone https://github.com/ghayth-1/GhostPass.git
 cd GhostPass
 python3 -m venv venv
 source venv/bin/activate
@@ -83,4 +83,4 @@ MIT License - see [LICENSE](LICENSE) for details.
 
 ## Author
 
-Made by [@ghayth-1I](https://github.com/ghayth-1I)
+Made by [@ghayth-1](https://github.com/ghayth-1)
