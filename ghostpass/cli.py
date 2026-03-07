@@ -141,7 +141,7 @@ TITLE = Fore.RED + Style.BRIGHT + """
   ██║  ███╗ ███████║ ██║   ██║ ███████╗    ██║   
   ██║   ██║ ██╔══██║ ██║   ██║ ╚════██║    ██║   
   ╚██████╔╝ ██║  ██║ ╚██████╔╝ ███████║    ██║   
-   ╚═════╝  ╚═╝  ╚═╝  ╚═════╝  ╚══════╝    ╚═╝   
+   ╚═════╝  ╚═╝  ╚═���  ╚═════╝  ╚══════╝    ╚═╝   
 """ + Style.RESET_ALL
 
 TITLE2 = Fore.YELLOW + Style.BRIGHT + """
@@ -175,7 +175,6 @@ def typewrite(text, delay=0.01):
 
 def animate_intro():
     try:
-        # Phase 1: Pulsing orb
         for i in range(2):
             clear_screen()
             print(GHOST_1)
@@ -183,28 +182,20 @@ def animate_intro():
             clear_screen()
             print(GHOST_2)
             time.sleep(0.2)
-
-        # Phase 2: Ghost face appears line by line
         clear_screen()
         for line in GHOST_LEAK.split("\n"):
             print(line)
             time.sleep(0.05)
         time.sleep(0.6)
-
-        # Phase 3: Leak drip animation
         clear_screen()
         print(GHOST_LEAK)
         for line in LEAK_DRIP.split("\n"):
             print(line)
             time.sleep(0.08)
         time.sleep(0.5)
-
-        # Phase 4: Full ghost with dripping passwords
         clear_screen()
         print(GHOST_FULL)
         time.sleep(0.3)
-
-        # Phase 5: Title drops in
         clear_screen()
         print(GHOST_FULL)
         for line in TITLE.split("\n"):
@@ -214,15 +205,11 @@ def animate_intro():
             print(line)
             time.sleep(0.05)
         time.sleep(0.3)
-
-        # Phase 6: Subtitle with typewriter
         print()
         for line in SUBTITLE.split("\n"):
             typewrite(line, 0.008)
         print()
         time.sleep(0.5)
-
-        # Phase 7: Loading bar
         sys.stdout.write(Fore.RED + "  [" + Style.RESET_ALL)
         for i in range(30):
             sys.stdout.write(Fore.RED + Style.BRIGHT + "#" + Style.RESET_ALL)
@@ -230,7 +217,6 @@ def animate_intro():
             time.sleep(0.04)
         sys.stdout.write(Fore.RED + "] " + Fore.GREEN + "READY\n\n" + Style.RESET_ALL)
         time.sleep(0.3)
-
     except KeyboardInterrupt:
         clear_screen()
 
