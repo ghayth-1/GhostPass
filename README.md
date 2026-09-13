@@ -9,7 +9,7 @@ A command-line tool that checks if your passwords have been exposed in data brea
 ## Installation
 
 ```bash
-git clone https://github.com/ghayth-1/GhostPass.git
+git clone https://github.com/0xSilverSurfer/GhostPass.git
 cd GhostPass
 python3 -m venv venv
 source venv/bin/activate
